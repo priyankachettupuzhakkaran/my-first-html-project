@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <title>
+            form
+        </title>
+        <style>
+            #maindiv{
+                height:150px;
+                width: 100%;
+            }
+            p{
+                position: fixed;
+                top: -25px;
+                right: 0;
+                width: 1300px;
+            }
+            form{
+                position: fixed;
+                top:180px;
+               
+               
+
+            }
+            .name{
+                position: fixed;
+                left:10px;
+            }
+            #name{
+                position: fixed;
+                top:200px;
+                left:10px;
+                width:130px;
+                height:20px;
+            }
+            #age{
+                position: fixed;
+                top:200px;
+                left:200px;
+                width:130px;
+                height:20px;
+            }
+            .age{
+                position: fixed;
+                left:200px;
+            }
+            #designation{
+                position: fixed;
+                top:200px;
+                left:400px;
+                width:130px;
+                height:20px;
+            }
+            .designation{
+                position: fixed;
+                left:400px;
+            }
+            #table{
+                position: fixed;
+                
+                top:500px;
+                left:10px;
+                width:130px;
+
+            }
+            #mydiv{
+                display:flex;
+            }
+            #tablename{
+                margin-left: 20px;  
+                margin-right: 50px;  
+            }
+            #tabledesignation{
+                margin-left: 100px;
+                 margin-right: 50px; 
+            }
+            #tableage{
+                margin-left: 200px; 
+                margin-right: 50px;
+            }
+            button{
+                position: fixed;
+                top:200px;
+                left:700px;
+                width:50px;
+                height:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="maindiv" style="background-color:blue; color:white;">
+            <p style="font-size:90px;">FORM </p>
+        </div>
+        <form>
+            <label class="name">Name:</label> 
+            <input id="name" type="text" name="Fname" >
+            <label class="age" type="text"  >Age:</label>
+            <input id="age" type="number" maxlength="2"  >
+            <label class ="designation">Designation:</label>
+            <input id="designation" type="text">
+        </form>
+        <main id="table">
+            <div id="mydiv">
+                <div id="tablename" >name</div>
+                <div id="tabledesignation">designation</div>
+                <div id="tableage">age</div>
+            </div>
+        </main>
+        </form>
+        
+          <button type="button" onclick="getInputValue()">ADD</button>
+          <script> 
+              
+              function getInputValue(){
+               
+            // Selecting the input element and get its value 
+                var inputVal = document.getElementById("name").value;
+                var deg =document.getElementById("designation").value
+                var ag =document.getElementById("age").value
+                
+            
+                console.log(inputVal)
+                console.log(ag)
+                console.log(deg)
+                if(0<ag && ag>100){
+                    alert("enter the no between 0 and 100")
+              }
+              else{
+              
+              var n=document.getElementById("tablename")
+              var nameofp= document.createElement("div")
+              nameofp.appendChild(document.createTextNode(inputVal))
+              n.appendChild(nameofp)
+              var d=document.getElementById("tabledesignation")
+              var dg=document.createElement("div")
+              dg.appendChild(document.createTextNode(deg))
+              d.appendChild(dg)
+              
+              var a=document.getElementById("tableage")
+              var age =document.createElement("div")
+              age.appendChild(document.createTextNode(ag))
+              a.appendChild(age)
+              
+              document.getElementById("name").value=""
+              document.getElementById("age").value=""
+              document.getElementById("designation").value=""
+              }
+              }
+          </script>
+
+    </body>
+</html>
