@@ -5,14 +5,12 @@
         </title>
         <style>
             #maindiv{
-                height:150px;
+                height:100px;
                 width: 100%;
             }
             p{
-                position: fixed;
-                top: -25px;
-                right: 0;
-                width: 1300px;
+                margin-left: 80px;
+                 margin-right: 50px;
             }
             form{
                 position: fixed;
@@ -87,8 +85,8 @@
         </style>
     </head>
     <body>
-        <div id="maindiv" style="background-color:blue; color:white;">
-            <p style="font-size:90px;">FORM </p>
+        <div id="maindiv" style="background-color:rgb(144, 208, 238); color:rgb(236, 22, 190);">
+            <p style="font-size:80px; font-family: cursive";>FORM </p>
         </div>
         <form>
             <label class="name">Name:</label> 
@@ -123,6 +121,9 @@
                 console.log(deg)
                 if(0<ag && ag>100){
                     alert("enter the no between 0 and 100")
+                    document.getElementById("age").value=""
+                    document.getElementById("age").focus();
+                    document.getElementById("age").select();
               }
               else{
               
